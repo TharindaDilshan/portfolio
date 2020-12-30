@@ -46,11 +46,14 @@ sr.reveal('.about_text',{delay: 400});
 /*SCROLL SKILLS*/
 sr.reveal('.skills_subtitle',{}); 
 sr.reveal('.skills_text',{}); 
-sr.reveal('.skills_data',{interval: 200}); 
+sr.reveal('.skills_data',{interval: 200, origin: 'left'}); 
 sr.reveal('.skills_img',{delay: 600});
 
 /*SCROLL WORK*/
 sr.reveal('.work_img',{interval: 200}); 
 
 /*SCROLL CONTACT*/
-sr.reveal('.contact_input',{interval: 200}); 
+sr.reveal('.contact_subtitle',{interval: 200}); 
+sr.reveal('.link_github', {interval: 200, origin: 'left'})
+sr.reveal('.link_linkedin', {interval: 200, origin: 'top'})
+sr.reveal('.link_devto', {interval: 200, origin: 'right'})
