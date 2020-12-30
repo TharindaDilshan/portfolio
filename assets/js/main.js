@@ -13,9 +13,9 @@ showMenu('nav-toggle','nav-menu')
 // const fsAnimation = document.querySelectorAll('.fullScreenAnimation');
 
 function addFsAnimation(){
-    fsAnimation1 = ['🎈', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '🎃', '⭐', '❄'];
-    fsAnimation2 = ['🎉', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '🧛', '⭐', '🎅'];
-    fsAnimation3 = ['🎊', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '👻', '⭐', '🎄'];
+    fsAnimation1 = ['🎈', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '🎃', '⭐', '❄'];
+    fsAnimation2 = ['🎉', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '🧛', '⭐', '🎅'];
+    fsAnimation3 = ['🎊', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '⭐', '🍂', '👻', '⭐', '🎄'];
 
     month = new Date().getMonth();
 
@@ -46,6 +46,36 @@ function linkAction(){
   navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
+
+const home = document.getElementById('home').offsetTop;
+const about = document.getElementById('about').offsetTop;
+const skills = document.getElementById('skills').offsetTop;
+const projects = document.getElementById('work').offsetTop;
+const contact = document.getElementById('contact').offsetTop;
+
+document.addEventListener('scroll', function(e){
+
+    if(window.scrollY >= home && window.scrollY < about){
+        navLink.forEach(n => n.classList.remove('active'));
+        navLink[0].classList.add('active');
+    }
+    if(window.scrollY >= about && window.scrollY < skills){
+        navLink.forEach(n => n.classList.remove('active'));
+        navLink[1].classList.add('active');
+    }
+    if(window.scrollY >= skills && window.scrollY < projects){
+        navLink.forEach(n => n.classList.remove('active'));
+        navLink[2].classList.add('active');
+    }
+    if(window.scrollY >= projects && window.scrollY < contact - 200){
+        navLink.forEach(n => n.classList.remove('active'));
+        navLink[3].classList.add('active');
+    }
+    if(window.scrollY >= contact - 200){
+        navLink.forEach(n => n.classList.remove('active'));
+        navLink[4].classList.add('active');
+    }
+});
 
 /* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
