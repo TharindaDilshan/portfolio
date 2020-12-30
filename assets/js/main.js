@@ -10,7 +10,30 @@ const showMenu = (toggleId, navId) =>{
 }
 showMenu('nav-toggle','nav-menu')
 
-/*===== ACTIVE AND REMOVE MENU =====*/
+// const fsAnimation = document.querySelectorAll('.fullScreenAnimation');
+
+function addFsAnimation(){
+    fsAnimation1 = ['🎈', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '🎃', '⭐', '❄'];
+    fsAnimation2 = ['🎉', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '🧛', '⭐', '🎅'];
+    fsAnimation3 = ['🎊', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '⭐', '👻', '⭐', '🎄'];
+
+    month = new Date().getMonth();
+
+    document.getElementById('animation_type_0').innerHTML = fsAnimation1[month];
+    document.getElementById('animation_type_1').innerHTML = fsAnimation1[month];
+    document.getElementById('animation_type_2').innerHTML = fsAnimation2[month];
+    document.getElementById('animation_type_3').innerHTML = fsAnimation3[month];
+    document.getElementById('animation_type_4').innerHTML = fsAnimation1[month];
+    document.getElementById('animation_type_5').innerHTML = fsAnimation2[month];
+    document.getElementById('animation_type_6').innerHTML = fsAnimation3[month];
+    document.getElementById('animation_type_7').innerHTML = fsAnimation1[month];
+    document.getElementById('animation_type_8').innerHTML = fsAnimation2[month];
+    document.getElementById('animation_type_9').innerHTML = fsAnimation3[month];
+}
+
+addFsAnimation();
+
+/* ACTIVE AND REMOVE MENU */
 const navLink = document.querySelectorAll('.nav_link');   
 
 function linkAction(){
@@ -24,7 +47,7 @@ function linkAction(){
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
-/*===== SCROLL REVEAL ANIMATION =====*/
+/* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
