@@ -53,6 +53,7 @@ const skills = document.getElementById('skills').offsetTop;
 const projects = document.getElementById('work').offsetTop;
 const contact = document.getElementById('contact').offsetTop;
 
+/* UPDATE NAV WITH SCROLL*/
 document.addEventListener('scroll', function(e){
 
     if(window.scrollY >= home && window.scrollY < about){
