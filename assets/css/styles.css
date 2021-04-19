@@ -840,6 +840,7 @@ transition: max-height 1.5s ease, opacity 1s ease;
   }
   .home_data{
     align-self: flex-end;
+    position: relative;
   }
   .home_social{
     padding-top: 0;
